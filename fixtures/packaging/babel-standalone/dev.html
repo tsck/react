@@ -5,8 +5,15 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.js"></script>
     <div id="container"></div>
     <script type="text/babel">
+      class Header extends React.Component {
+        render() {
+          console.log(this.props);
+          return <h1>Hello There!</h1>;
+        }
+      }
+
       ReactDOM.render(
-        <h1>Hello World!</h1>,
+        <Header prop1="test1" prop2="test2" />,
         document.getElementById('container')
       );
     </script>
